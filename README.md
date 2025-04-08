@@ -10,9 +10,10 @@ bin/magento setup:upgrade
 bin/magento setup:di:compile
 bin/magento cache:flush
 
+#API Endpoint:
 Endpoint: POST /rest/V1/order/status/update
 
-Payload Example:
+#Payload Example:
 
 {
   "increment_id": "100000001",
@@ -21,7 +22,7 @@ Payload Example:
 
 
 
-Architectural Decisions Explanation->
+#Architectural Decisions Explanation
 
 Service Class for Shipment Logic:The shipment creation logic is encapsulated in a dedicated service class method (createShipment($order)) to follow the Single Responsibility Principle and keep controllers/observers lightweight and focused.
 
